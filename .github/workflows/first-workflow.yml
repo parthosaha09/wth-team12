@@ -14,9 +14,19 @@ on:
 
 jobs:
   job1:
+    name: Job1
     runs-on: ubuntu-latest
     steps:
       - name: step 1
         run: echo "step 1"
       - name : step 2
         run: echo "step 2"
+  job2:
+    name: Job2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ship it
+        uses: mscoutermarsh/cowsays-action@master
+        with:
+          text: 'ship ship ship!'
+          color: 'red'
